@@ -1,0 +1,17 @@
+h1 {
+  color: white;
+  margin: 20px;
+  font-size: 24px;
+}
+input {
+  font-size: 24px;
+  margin: 20px;
+  padding: 15px;
+  width: 95%;
+}
+.bold {
+  font-weight: bold;
+}
+.bold:hover {
+  text-decoration: underline;
+}

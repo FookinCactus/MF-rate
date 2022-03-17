@@ -1,0 +1,33 @@
+.top {
+  background-color: #4AE7AD;
+}
+.home:hover{
+  text-decoration: underline;
+}
+.bottom {
+  background-color: #4EF6B8;
+}
+h1 {
+  font-size: 36px;
+}
+.login {
+  padding-left: 1280px;
+}
+.login:hover {
+  text-decoration: underline;
+}
+li {
+  display: inline-block;
+  font-size: 24px;
+  padding-left: 130px;
+}
+li:hover {
+  text-decoration: underline;
+}
+button {
+  background-color:#11195F;
+  color: #4EF6B8;
+  font-size: 24px;
+  border-radius: 7px;
+  padding: 10px
+}
