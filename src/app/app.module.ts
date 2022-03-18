@@ -9,6 +9,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { LoginComponent } from './Components/login/login.component';
 import { MainPageComponent } from './Components/main-page/main-page.component';
+import { NewAccountComponent } from './Components/new-account/new-account.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MainPageComponent } from './Components/main-page/main-page.component';
     TopBarComponent,
     AboutUsComponent,
     LoginComponent,
-    MainPageComponent
+    MainPageComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,
