@@ -16,4 +16,10 @@ button {
   background-color: #11195F;
   color: white;
   padding: 7px;
+  border: 0;
+  transition: all 0.5s;
+}
+button:hover {
+  background-color: black;
+  color: #4EF6B8;
 }
