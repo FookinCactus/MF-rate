@@ -8,12 +8,11 @@
     <h1 class="titles">Email:</h1>
     <input name="email" value="ben@s56.net">
   </div>
-  <div class="pass">
+  <div>
     <h1 class="titles">Password:</h1>
     <mat-form-field appearance="fill">
-      <mat-label>Enter your password</mat-label>
       <input value="FakePass445" class="pw" matInput [type]="hide ? 'password' : 'text'">
-      <button (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <button type="button" (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
     </mat-form-field>

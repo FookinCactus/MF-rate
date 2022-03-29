@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class YourProfileComponent implements OnInit {
 
-  info: string[] = ['Ben Boswell', 'Ben@s56.net', 'NotRealPass445']
-
   hide = true;
 
   constructor() { }
