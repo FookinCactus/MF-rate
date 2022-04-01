@@ -13,8 +13,8 @@ export class NewAccountComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  urls=[];
-  onselect(e) {
+  urls=[] as any;
+  onselect(e: any) {
     if(e.target.files) {
       for (let i = 0; i < File.length; i++) {
         let reader = new FileReader();

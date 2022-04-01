@@ -1,5 +1,5 @@
 <h1>Your Profile</h1>
-<form>
+<div *ngIf="hide; else edit">
   <div>
     <h1 class="titles">Name:</h1>
     <input name="name" value="Ben Boswell">
@@ -11,10 +11,32 @@
   <div>
     <h1 class="titles">Password:</h1>
     <mat-form-field appearance="fill">
-      <input value="FakePass445" class="pw" matInput [type]="hide ? 'password' : 'text'">
-      <button type="button" (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <input value="FakePass445" class="pw" matInput [type]="phide ? 'password' : 'text'">
+      <button type="button" (click)="phide = !phide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
     </mat-form-field>
   </div>
-</form>
+  <button type="button" (click)="hide=!hide">Submit</button>
+</div>
+<ng-template #edit>
+  <div>
+    <h1 class="titles">Name:</h1>
+    <input readonly name="name" value="Ben Boswell">
+  </div>
+  <div>
+    <h1 class="titles">Email:</h1>
+    <input readonly name="email" value="ben@s56.net">
+  </div>
+  <div>
+    <h1 class="titles">Password:</h1>
+    <mat-form-field appearance="fill">
+      <input readonly value="FakePass445" class="pw" matInput [type]="phide ? 'password' : 'text'">
+      <button type="button" (click)="phide = !phide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <button type="button" (click)="hide=!hide">Edit</button>
+</ng-template>
+

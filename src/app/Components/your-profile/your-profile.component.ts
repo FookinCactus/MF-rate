@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class YourProfileComponent implements OnInit {
 
-  hide = true;
+  hide = false;
+  phide = true;
 
   constructor() { }
 
