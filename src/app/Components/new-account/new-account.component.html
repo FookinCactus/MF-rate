@@ -2,8 +2,7 @@
 <form>
   <div>
     <input name="name" placeholder="Name:">
-    <img *ngFor="let url of urls" [src]="url" alt="img" height="200">
-    <input type="file" (change)="onselect($event)">
+    <app-img-upload></app-img-upload>
   </div>
   <div>
     <input name="email" placeholder="Email:">
