@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup } from "@angular/forms";
   styleUrls: ['./img-upload.component.css']
 })
 export class ImgUploadComponent implements OnInit {
-  imageURL: string;
+  imageURL?: string;
   uploadForm: FormGroup;
   constructor(public fb: FormBuilder) {
     this.uploadForm = this.fb.group({
@@ -18,17 +18,18 @@ export class ImgUploadComponent implements OnInit {
   ngOnInit(): void { }
 
   showPreview(event:any) {
-
-    const file = (event.target as HTMLInputElement).files[0];
-    this.uploadForm.patchValue({
-      avatar: file
-    });
-    this.uploadForm.get('avatar').updateValueAndValidity()
-    const reader = new FileReader();
-    reader.onload = () => {
-      this.imageURL = reader.result as string;
+    if (event?.target?.files) {
+      const file = event.target.files[0];
+      this.uploadForm.patchValue({
+        avatar: file
+      });
+      this.uploadForm.get('avatar')?.updateValueAndValidity()
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.imageURL = reader.result as string;
+      }
+      reader.readAsDataURL(file)
     }
-    reader.readAsDataURL(file)
   }
   submit() {
     console.log(this.uploadForm.value)

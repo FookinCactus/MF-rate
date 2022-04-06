@@ -1,3 +1,6 @@
+.img {
+  display: inline-flex;
+}
 h1 {
   font-size: 24px;
   color: white;
@@ -23,3 +26,4 @@ button:hover {
   background-color: black;
   color: #4EF6B8;
 }
+
