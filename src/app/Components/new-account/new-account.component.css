@@ -1,5 +1,11 @@
-.img {
-  display: inline-flex;
+.left{
+  width: 50%;
+  float: left;
+}
+.right {
+  width: 35%;
+  float: right;
+  margin-top: 60px;
 }
 h1 {
   font-size: 24px;
@@ -10,7 +16,7 @@ input {
   font-size: 24px;
   margin: 20px;
   padding: 15px;
-  width: 40%;
+  width: 80%;
 }
 button {
   margin: 20px;

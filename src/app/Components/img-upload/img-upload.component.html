@@ -1,6 +1,11 @@
 <form [formGroup]="uploadForm" (ngSubmit)="submit()">
-  <input type="file" accept="image/*" (change)="showPreview($event)"/>
   <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
     <img [src]="imageURL" [alt]="uploadForm.value.name">
+  </div>
+  <div>
+    <label class="UB">
+      <input type="file" accept="image/*" (change)="showPreview($event)"/>
+      Upload Image
+    </label>
   </div>
 </form>
