@@ -1,5 +1,5 @@
 <h1>Your Profile</h1>
-<div *ngIf="hide; else edit">
+<div class="left" *ngIf="hide; else edit">
   <div>
     <h1 class="titles">Name:</h1>
     <input name="name" value="Ben Boswell">
@@ -12,8 +12,8 @@
     <h1 class="titles">Password:</h1>
     <mat-form-field appearance="fill">
       <input value="FakePass445" class="pw" matInput [type]="phide ? 'password' : 'text'">
-      <button type="button" (click)="phide = !phide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      <button type="button" (click)="phide = !phide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="phide">
+        <mat-icon>{{phide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
     </mat-form-field>
   </div>
@@ -32,8 +32,8 @@
     <h1 class="titles">Password:</h1>
     <mat-form-field appearance="fill">
       <input readonly value="FakePass445" class="pw" matInput [type]="phide ? 'password' : 'text'">
-      <button type="button" (click)="phide = !phide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      <button type="button" (click)="phide = !phide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="phide">
+        <mat-icon>{{phide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
     </mat-form-field>
   </div>

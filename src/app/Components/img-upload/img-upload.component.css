@@ -1,17 +1,55 @@
-.UB {
-  margin: 20px;
-  padding: 40px;
-  background-color: white;
-  font-size: 24px;
-  color: #5C5C5C;
-}
-.UB:hover {
-  cursor: pointer;
-}
+
 input[type="file"] {
   display: none;
 }
-img {
-  width:200px;
-  margin: -40px 32px 60px;
+
+.image {
+  width: 400px;
+  height: 350px;
+  object-fit: cover;
+  margin: -43px -60px 60px;
+  border: 5px solid white;
+}
+
+.UB {
+  background-color: white;
+  color: #5C5C5C;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 7px;
+  padding: 40px;
+  cursor: pointer;
+  border: 0;
+  transition: all 0.5s;
+}
+
+.UB span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.UB span:after {
+  content: '\2191';
+  position: center;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  transition: 0.5s;
+}
+
+.UB:hover span {
+  padding-top: 15px;
+}
+
+.UB:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.UB:hover {
+  background-color: black;
+  color: white;
+  transition: 0s;
 }
