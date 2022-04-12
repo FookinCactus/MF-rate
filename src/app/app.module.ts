@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './Components/top-bar/top-bar.component';
@@ -15,6 +16,8 @@ import { YourProfileComponent } from './Components/your-profile/your-profile.com
 import { MatInputModule } from "@angular/material/input";
 import { ImgUploadComponent } from './Components/img-upload/img-upload.component';
 import { ReactiveFormsModule } from "@angular/forms";
+import { YourReviewsComponent } from './Components/your-reviews/your-reviews.component';
+import { ReviewsComponent } from './Components/reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { ReactiveFormsModule } from "@angular/forms";
     NewAccountComponent,
     NewReviewComponent,
     YourProfileComponent,
-    ImgUploadComponent
+    ImgUploadComponent,
+    YourReviewsComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +41,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     MatIconModule,
     MatInputModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
 
   ],
   providers: [],

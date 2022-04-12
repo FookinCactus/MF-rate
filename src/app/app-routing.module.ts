@@ -6,6 +6,8 @@ import {MainPageComponent} from "./Components/main-page/main-page.component";
 import {NewAccountComponent} from "./Components/new-account/new-account.component";
 import {NewReviewComponent} from "./Components/new-review/new-review.component";
 import {YourProfileComponent} from "./Components/your-profile/your-profile.component";
+import {YourReviewsComponent} from "./Components/your-reviews/your-reviews.component";
+import {ReviewsComponent} from "./Components/reviews/reviews.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full'},
@@ -15,6 +17,8 @@ const routes: Routes = [
   { path: 'new-account', component: NewAccountComponent },
   { path: 'new-review', component: NewReviewComponent },
   { path: 'profile', component: YourProfileComponent },
+  { path: 'reviews', component: ReviewsComponent },
+  { path: 'your-reviews', component: YourReviewsComponent },
 ];
 
 @NgModule({

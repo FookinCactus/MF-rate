@@ -1,0 +1,15 @@
+<div class="left">
+  <button class="r">Reviews</button>
+</div>
+<div class="right">
+  <button routerLink="/your-reviews">Your Reviews</button>
+</div>
+<div>
+  <div class="review-card" *ngFor="let review of reviews">
+    <img class="ph" src="../../../assets/images/placeholder.png" alt="placeholder">
+    <h1>For: {{review.reviewee}}</h1>
+    <h1>Written By: {{review.reviewer}}</h1>
+    <h1>Review: {{review.review}}</h1>
+    <h1>Rating: {{review.rating}}</h1>
+  </div>
+</div>
